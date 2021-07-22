@@ -1,8 +1,58 @@
 <html>
     <head>
-        
+        <style>
+            body
+            {
+                background-color: blueviolet;
+            }
+            button
+            {
+                height: 20px;
+                width: 60px;
+                color:red;
+            }
+            div
+            {
+                text-align: right;
+            }
+            audio
+            {
+                display: none;
+            }
+        </style>
+        <script>
+            var music_counter=0
+            function show_music()
+            {
+                if(music_counter%2==0)
+                {
+                    document.getElementById('music_audio').style.display="block"
+                }
+                else
+                {
+                    document.getElementById('music_audio').style.display="none"
+                }
+                music_counter++
+            }           
+        </script>
     </head>
     <body>
-
+        <br>
+        <br>
+        <audio controls id="music_audio">
+            <source src="musics.mp3" type="audio/mpeg">
+        </audio>
+        <div>
+            <button>image</button>
+            <br>
+            <button>movie</button>
+            <br>
+            <button id="music_button" onclick="show_music()">music</button>
+            <br>
+            <button>voice</button>
+            <br>
+            <button>write</button>
+            <br>
+        </div>
     </body>
 </html>
